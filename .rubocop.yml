@@ -1,0 +1,50 @@
+require: rubocop-rspec
+
+AllCops:
+  Exclude:
+    - '**/spec_helper.rb'
+    - 'spec/fixtures/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+  TargetRubyVersion: 2.5
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - '**/*_spec.rb'
+  ExcludedMethods:
+    - 'namespace'
+    - 'describe'
+    - 'context'
+
+Metrics/LineLength:
+  Enabled: true
+  Max: 90
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+  Exclude:
+    - 'Gemfile'
+
+Style/Documentation:
+  Enabled: false
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+RSpec/EmptyLineAfterSubject:
+  Enabled: false
+
+RSpec/EmptyLineAfterHook:
+  Enabled: false
+
+RSpec/EmptyLineAfterFinalLet:
+  Enabled: false
+
+RSpec/FilePath:
+  Enabled: true
+  CustomTransform:
+    RuboCop: rubocop
+    RSpec: rspec
+    FreeAgent: ''

@@ -1,0 +1,49 @@
+{
+  "title": "",
+  "type": "object",
+  "properties": {
+    "serial_number": {
+      "description": "Serial number of the AC device",
+      "type": "string"
+    },
+    "firmware_version": {
+      "description": "Firmware version number of the AC device",
+      "type": "string"
+    },
+    "data": {
+      "description": "AC device sensor readings",
+      "type": "array",
+      "items": { "$ref": "#/definitions/item" },
+      "maxItems": 500
+    }
+  },
+  "definitions": {
+    "item": {
+      "type": "object",
+      "required": [ "date", "temperature", "humidity", "carbon_monoxide", "health_status" ],
+      "properties": {
+        "date": {
+          "description": "Current date and time.",
+          "type": "string"
+        },
+        "temperature": {
+          "description": "Temperature reading (Celsius).",
+          "type": "string"
+        },
+        "humidity": {
+          "description": "Air humidity (%).",
+          "type": "string"
+        },
+        "carbon_monoxide": {
+          "description": "Carbon Monoxide level in the air (PPM).",
+          "type": "string"
+        },
+        "health_status": {
+          "description": "Device health status.",
+          "type": "string",
+          "maxLength": 150
+        }
+      }
+    }
+  }
+}

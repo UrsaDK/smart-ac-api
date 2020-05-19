@@ -1,0 +1,9 @@
+development: &development
+  public_folder: public
+
+test: &test
+  <<: *development
+  show_exceptions: false
+
+production: &production
+  <<: *test

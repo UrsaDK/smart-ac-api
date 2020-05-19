@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline';">
+
+    <title>Smart AC Prototype</title>
+    <meta name="description" content="A proof of concept for the smart air conditioner backend and API.">
+
+    <script type="text/javascript">
+        document.documentElement.classList.replace('no-js', 'js');
+    </script>
+
+    <style media="all">
+        header, footer {
+            display: none;
+        }
+        .goto-admin {
+            left: 10%;
+        }
+        .goto-api {
+            right: 10%;
+        }
+        .notice {
+            box-sizing: border-box;
+            width: 30%;
+            padding: 2em;
+
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+
+            border: 1px solid #333;
+            border-radius: 10px;
+            color: #333;
+            /* font-size: xx-large; */
+            text-align: center;
+            text-decoration: none;
+
+            transition: background-color 100ms linear;
+        }
+        .notice p {
+            text-align: left;
+        }
+        .notice:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Smart AC Prototype</h1>
+        <p>A proof of concept for the smart air conditioner backend and API.</p>
+    </header>
+
+    <a class="notice goto-admin" href="/admin">
+        <h2>Admin System</h2>
+        <p>Admin System prototype for the Smart AC project.</p>
+    </a>
+
+    <a class="notice goto-api" href="/api">
+        <h2>Prototype API</h2>
+        <p>A prototype of the backend API served by mock data.</p>
+    </a>
+</body>
+</html>

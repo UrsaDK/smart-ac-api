@@ -1,0 +1,11 @@
+development: &development
+  adapter: sqlite
+  database: db/development.db
+
+test: &test
+  <<: *development
+  database: db/test.db
+
+production: &production
+  <<: *test
+  database: db/production.db
